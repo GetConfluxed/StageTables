@@ -20,44 +20,44 @@ import stanhebben.zenscript.annotations.ZenMethod;
 
 @Mod(modid = "stagetables", name = "Stage Tables", version = "@VERSION@", dependencies = "required-after:bookshelf@[2.2.458,);", certificateFingerprint = "@FINGERPRINT@")
 public class StageTablesMod {
-    
+
     public static final LoggingHelper LOG = new LoggingHelper("Stage Tables");
-    
+
     private static final Map<String, StageTable> stageTables = new HashMap<>();
-    
+
     @Instance("stagetables")
     public static StageTablesMod instance;
-    
+
     @EventHandler
     public void onPreInit (FMLPreInitializationEvent event) {
 
-    	CraftTweakerAPI.registerGlobalSymbol("stageTables", CraftTweakerAPI.getJavaStaticFieldSymbol(StageTablesMod.class, "instance"));
+        CraftTweakerAPI.registerGlobalSymbol("stageTables", CraftTweakerAPI.getJavaStaticFieldSymbol(StageTablesMod.class, "instance"));
         CraftTweakerAPI.registerClass(StageTable.class);
         CraftTweakerAPI.registerClass(StageEntry.class);
         CraftTweakerAPI.registerClass(CrTStageCondition.class);
-        
+
         BookshelfRegistry.addCommand(new CommandStageTableTree());
     }
-    
+
     @EventHandler
     public void onLoadComplete (FMLLoadCompleteEvent event) {
-        
-    	if (stageTables.isEmpty()) {
 
-    		LOG.info("It looks like you haven't registered any stage tables yet. You can find info on how to use this mod here: ");
-    	}
-    	
-    	else {
-    		
-    		LOG.info("Loaded {} stage tables.", stageTables.size());
-    	}
-    	
-    	if (stageTables.size() > 99) {
-    		
-    		LOG.info("Wow! That's a lot of tables!");
-    	}
+        if (stageTables.isEmpty()) {
+
+            LOG.info("It looks like you haven't registered any stage tables yet. You can find info on how to use this mod here: ");
+        }
+
+        else {
+
+            LOG.info("Loaded {} stage tables.", stageTables.size());
+        }
+
+        if (stageTables.size() > 99) {
+
+            LOG.info("Wow! That's a lot of tables!");
+        }
     }
-    
+
     /**
      * Creates a new table for a name. If that table already exists it will be replaced.
      *
@@ -66,20 +66,26 @@ public class StageTablesMod {
      */
     @ZenMethod
     public StageTable createTable (String name) {
-        
+
         final StageTable table = new StageTable(name);
-        
+
         if (stageTables.containsKey(name)) {
-            
+
             LOG.warn("The stage table {} has been created twice. It is being overidden!", name);
         }
-        
+
         stageTables.put(name, table);
         return table;
     }
-    
-    public static Map<String, StageTable> getStageTables() {
-    	
-    	return stageTables;
+
+    @ZenMethod
+    public StageTable getTable (String name) {
+
+        return stageTables.get(name);
+    }
+
+    public static Map<String, StageTable> getStageTables () {
+
+        return stageTables;
     }
 }

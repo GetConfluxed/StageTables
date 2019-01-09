@@ -11,7 +11,7 @@ import stanhebben.zenscript.annotations.ZenClass;
 @FunctionalInterface
 @ZenClass("mods.stagetables.CrTStageCondition")
 public interface CrTStageCondition {
-    
+
     /**
      * Tests if the player can pass this condition. Conditions should be deterministic and not
      * use random elements.

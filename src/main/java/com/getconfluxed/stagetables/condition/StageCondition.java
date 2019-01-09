@@ -8,7 +8,7 @@ import net.minecraft.entity.player.EntityPlayer;
  */
 @FunctionalInterface
 public interface StageCondition {
-    
+
     /**
      * Tests if the player can pass this condition. Conditions should be deterministic and not
      * use random elements.
