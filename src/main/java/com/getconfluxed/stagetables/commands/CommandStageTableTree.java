@@ -7,6 +7,7 @@ public class CommandStageTableTree extends CommandTree {
     
     public CommandStageTableTree () {
         
+    	this.addSubcommand(new CommandDumpTables());
     }
     
     @Override
