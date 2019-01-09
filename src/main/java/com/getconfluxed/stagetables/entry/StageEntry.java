@@ -62,12 +62,22 @@ public class StageEntry {
         return this.weight;
     }
 
+    /**
+     * Adds a zenscript defined condition to the stage entry.
+     *
+     * @param condition A zenscript defined function.
+     */
     @ZenMethod
     public void addCondition (CrTStageCondition condition) {
 
         this.conditions.add(player -> condition.testCondition(CraftTweakerMC.getIPlayer(player)));
     }
 
+    /**
+     * Adds a stage requirement to the entry.
+     *
+     * @param stage The required stage to use.
+     */
     @ZenMethod
     public void addStageCondition (String stage) {
 
@@ -102,6 +112,11 @@ public class StageEntry {
         return true;
     }
 
+    /**
+     * Gets the total number of conditions.
+     *
+     * @return The number of conditions.
+     */
     public int getConditionCount () {
 
         return this.conditions.size();

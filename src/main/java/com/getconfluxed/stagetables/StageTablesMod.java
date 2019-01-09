@@ -78,12 +78,23 @@ public class StageTablesMod {
         return table;
     }
 
+    /**
+     * Gets a table by it's name. This can be used in CrT scripts to retrieve a table.
+     *
+     * @param name The name of the table.
+     * @return The table that was found.
+     */
     @ZenMethod
     public StageTable getTable (String name) {
 
         return stageTables.get(name);
     }
 
+    /**
+     * Gets the direct map of all stage tables. This method should be considered restricted.
+     *
+     * @return The map of all stage data.
+     */
     public static Map<String, StageTable> getStageTables () {
 
         return stageTables;

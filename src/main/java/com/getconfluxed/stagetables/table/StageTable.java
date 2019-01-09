@@ -57,12 +57,23 @@ public class StageTable {
         return this.entries.getRandomEntry().getEntry();
     }
 
+    /**
+     * Gets the total weight of the table.
+     *
+     * @return The total weight of the table.
+     */
     @ZenMethod
     public int getTotalWeight () {
 
         return this.entries.updateTotal();
     }
 
+    /**
+     * Gets all of the entries in the table.
+     *
+     * @return All entries in the table.
+     */
+    @ZenMethod
     public List<WeightedEntry<StageEntry>> getEntries () {
 
         return this.entries.getEntries();
@@ -93,6 +104,13 @@ public class StageTable {
         return false;
     }
 
+    /**
+     * Creates a new entry in the table.
+     *
+     * @param stage The stage to award.
+     * @param weight The weight of the stage.
+     * @return The stage entry object that was created.
+     */
     @ZenMethod
     public StageEntry createEntry (String stage, int weight) {
 
