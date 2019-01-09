@@ -78,5 +78,8 @@ public class StageTablesMod {
         return table;
     }
     
-    
+    public static Map<String, StageTable> getStageTables() {
+    	
+    	return stageTables;
+    }
 }
