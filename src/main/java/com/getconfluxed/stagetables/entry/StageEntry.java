@@ -101,4 +101,9 @@ public class StageEntry {
         // If all conditions are fine, assume they can obtain it.
         return true;
     }
+    
+    public int getConditionCount() {
+    	
+    	return this.conditions.size();
+    }
 }
