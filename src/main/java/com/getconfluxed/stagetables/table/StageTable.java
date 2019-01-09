@@ -58,6 +58,12 @@ public class StageTable {
         return this.entries.getRandomEntry().getEntry();
     }
     
+    @ZenMethod
+    public int getTotalWeight() {
+    	
+    	return this.entries.updateTotal();
+    }
+    
     public List<WeightedEntry<StageEntry>> getEntries () {
         
         return this.entries.getEntries();
