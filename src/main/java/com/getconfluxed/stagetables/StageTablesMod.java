@@ -3,11 +3,13 @@ package com.getconfluxed.stagetables;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.getconfluxed.stagetables.commands.CommandStageTableTree;
 import com.getconfluxed.stagetables.condition.CrTStageCondition;
 import com.getconfluxed.stagetables.entry.StageEntry;
 import com.getconfluxed.stagetables.table.StageTable;
 
 import crafttweaker.CraftTweakerAPI;
+import net.darkhax.bookshelf.BookshelfRegistry;
 import net.darkhax.bookshelf.lib.LoggingHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -33,6 +35,8 @@ public class StageTablesMod {
         CraftTweakerAPI.registerClass(StageTable.class);
         CraftTweakerAPI.registerClass(StageEntry.class);
         CraftTweakerAPI.registerClass(CrTStageCondition.class);
+        
+        BookshelfRegistry.addCommand(new CommandStageTableTree());
     }
     
     @EventHandler
