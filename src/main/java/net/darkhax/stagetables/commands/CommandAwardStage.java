@@ -1,4 +1,4 @@
-package com.getconfluxed.stagetables.commands;
+package net.darkhax.stagetables.commands;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,12 +6,11 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.getconfluxed.stagetables.StageTablesMod;
-import com.getconfluxed.stagetables.entry.StageEntry;
-import com.getconfluxed.stagetables.table.StageTable;
-
 import net.darkhax.bookshelf.command.Command;
 import net.darkhax.gamestages.GameStageHelper;
+import net.darkhax.stagetables.StageTablesMod;
+import net.darkhax.stagetables.entry.StageEntry;
+import net.darkhax.stagetables.table.StageTable;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;

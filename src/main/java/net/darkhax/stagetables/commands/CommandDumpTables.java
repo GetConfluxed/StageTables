@@ -1,4 +1,4 @@
-package com.getconfluxed.stagetables.commands;
+package net.darkhax.stagetables.commands;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,15 +7,15 @@ import java.util.Map.Entry;
 
 import org.apache.commons.io.FileUtils;
 
-import com.getconfluxed.stagetables.StageTablesMod;
-import com.getconfluxed.stagetables.entry.StageEntry;
-import com.getconfluxed.stagetables.table.StageTable;
 import com.google.common.base.Charsets;
 
 import net.darkhax.bookshelf.command.Command;
 import net.darkhax.bookshelf.lib.Constants;
 import net.darkhax.bookshelf.lib.TableBuilder;
 import net.darkhax.bookshelf.lib.WeightedSelector.WeightedEntry;
+import net.darkhax.stagetables.StageTablesMod;
+import net.darkhax.stagetables.entry.StageEntry;
+import net.darkhax.stagetables.table.StageTable;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;

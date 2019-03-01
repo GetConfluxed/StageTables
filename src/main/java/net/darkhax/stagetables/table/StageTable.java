@@ -1,11 +1,10 @@
-package com.getconfluxed.stagetables.table;
+package net.darkhax.stagetables.table;
 
 import java.util.List;
 
-import com.getconfluxed.stagetables.entry.StageEntry;
-
 import net.darkhax.bookshelf.lib.WeightedSelector;
 import net.darkhax.bookshelf.lib.WeightedSelector.WeightedEntry;
+import net.darkhax.stagetables.entry.StageEntry;
 import net.minecraft.entity.player.EntityPlayer;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;

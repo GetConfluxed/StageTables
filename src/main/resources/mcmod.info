@@ -5,8 +5,7 @@
       "description":"Adds a framework for defining weighted randomized stage tables.",
       "version":"${version}",
       "mcversion":"${mcversion}",
-      "url":"TODO",
-      "updateUrl":"",
+      "url":"https://minecraft.curseforge.com/projects/stage-tabels",
       "authorList":[  
          "Darkhax"
       ]

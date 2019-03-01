@@ -1,13 +1,12 @@
-package com.getconfluxed.stagetables.entry;
+package net.darkhax.stagetables.entry;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.getconfluxed.stagetables.condition.CrTStageCondition;
-import com.getconfluxed.stagetables.condition.StageCondition;
-
 import crafttweaker.api.minecraft.CraftTweakerMC;
 import net.darkhax.gamestages.GameStageHelper;
+import net.darkhax.stagetables.condition.CrTStageCondition;
+import net.darkhax.stagetables.condition.StageCondition;
 import net.minecraft.entity.player.EntityPlayer;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;

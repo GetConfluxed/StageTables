@@ -1,4 +1,4 @@
-package com.getconfluxed.stagetables.commands;
+package net.darkhax.stagetables.commands;
 
 import net.darkhax.bookshelf.command.CommandTree;
 import net.minecraft.command.ICommandSender;
